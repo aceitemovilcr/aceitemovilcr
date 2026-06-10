@@ -3,6 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AceiteMóvilCR | Cambio de Aceite a Domicilio</title>
+
+<!-- FAVICON: Logo como ícono de la pestaña -->
+<link rel="icon" type="image/png" href="aceitemovilcr.png"
+<link rel="apple-touch-icon" href="aceitemovilcr_logo.png">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--p:#0f172a;--a:#facc15;--at:#0f172a;--t:#334155;--s:#f8fafc;--w:#fff;--g:#22c55e;--wa:#25D366}
@@ -17,6 +22,8 @@ body{font-family:'Segoe UI',sans-serif;color:var(--t);background:var(--w);overfl
 
 header{background:var(--p);padding:16px 0;position:sticky;top:0;z-index:200;border-bottom:1px solid rgba(255,255,255,.08)}
 .nav{display:flex;justify-content:space-between;align-items:center;width:90%;max-width:1200px;margin:0 auto}
+.logo-nav{display:flex;align-items:center;gap:12px}
+.logo-nav img{height:48px;width:48px;object-fit:contain;filter:drop-shadow(0 0 8px rgba(250,204,21,.4))}
 .logo{color:#fff;font-size:22px;font-weight:800;letter-spacing:-0.5px}
 .logo span{color:var(--a)}
 .nav-cta{display:flex;align-items:center;gap:12px}
@@ -26,6 +33,34 @@ header{background:var(--p);padding:16px 0;position:sticky;top:0;z-index:200;bord
 .hero{background:linear-gradient(rgba(15,23,42,.88),rgba(15,23,42,.97)),url('https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&q=80&w=1400') center/cover no-repeat;color:#fff;padding:90px 0 70px;text-align:center;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%, rgba(250,204,21,.08) 0%, transparent 70%);pointer-events:none}
 .hero .c{width:90%;max-width:800px;margin:0 auto;position:relative}
+
+/* LOGO EN HERO */
+.hero-logo-wrap{display:flex;justify-content:center;margin-button:28px}
+.hero-logo-ring{
+  position:relative;
+  width:160px;height:160px;
+  border-radius:50%;
+  background:radial-gradient(circle at 40% 35%, #1e293b, #0f172a);
+  boder:2px solid rgba(250,204,21,.25);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 0 0 1px rgba(250,204,21,.1), 0 0 40px rgba(250,204,21,.12), inset 0 0 30px rgba(0,0,0,.4)
+  animation:logo-glow 3s each-in-our infinate;
+}
+@keyframes logo-glow{
+  0%, 100%{box-shadow:0 0 0 1px rgba(250,204,21,.1), 0 0 40px rgba(250,204,21,.12), inset 0 0 30px rgba(0,0,0,.4)}
+  50%{box-shadow:0 0 0 1px rgba(250,204,21,.25), 0 0 60px rgba(250,204,21,.22), inset 0 0 30px rgba(0,0,0,.4)}
+}
+.hero-logo-ring img{width:130px;height:130px;object-fit:contain}
+.hero-logo-ring::after{
+  content:'';
+  position:absolute;
+  inset:-8px;
+  border-radius:50%;
+  border:1px dashed rgba(250,204,21,.2);
+  animation:spin-slow 20s linear infinite;
+}
+@keyframes spin-slow{to{transform:rotate(360deg)}}
+
 .badge-top{display:inline-flex;align-items:center;gap:6px;background:rgba(250,204,21,.12);border:1px solid rgba(250,204,21,.25);color:var(--a);padding:6px 14px;border-radius:50px;font-size:13px;font-weight:600;margin-bottom:22px}
 .badge-top .dot{width:7px;height:7px;background:var(--a);border-radius:50%;animation:pulse-dot 1.5s infinite}
 @keyframes pulse-dot{0%,100%{opacity:1}50%{opacity:.4}}
@@ -110,6 +145,11 @@ header{background:var(--p);padding:16px 0;position:sticky;top:0;z-index:200;bord
 .cta{background:var(--p);padding:70px 0;text-align:center;position:relative;overflow:hidden}
 .cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 100%, rgba(250,204,21,.08) 0%, transparent 60%)}
 .cta-inner{position:relative}
+
+  /* LOGO EN CTA FINAL */
+.cta-logo{display:flex;justify-content:center;margin-bottom:24px}
+.cta-logo img{height:80px;width:80px;object-fit:contain;opacity:.9;filter:drop-shadow(0 0 12px rgba(250,204,21,.3))}
+
 .cta h2{font-size:32px;color:#fff;font-weight:800;margin-bottom:12px}
 .cta p{color:#94a3b8;margin-bottom:32px;font-size:16px}
 .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
@@ -123,12 +163,18 @@ header{background:var(--p);padding:16px 0;position:sticky;top:0;z-index:200;bord
 
 footer{background:#020617;color:#475569;padding:24px 0;text-align:center;font-size:13px}
 
+/* FOOTER CON LOGO */
+.footer-inner{display:flex;flex-direction:column;align-items:center;gap:10px}
+.footer-logo{height:40px;width:40px;object-fit:contain;opacity:.5;filter:grayscale(1)}
+
 @media(max-width:768px){
 .hero h1{font-size:28px}
 .hero-btns{flex-direction:column;align-items:center}
 .trust-items{gap:16px}
 .nav-cta .btn-o{display:none}
 .pc.dest{transform:none}
+.hero-logo-ring{width:130px;height:130px}
+.hero-logo-ring img{width:106px;height:106px}
 }
 
 .fade-in{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
@@ -139,7 +185,10 @@ footer{background:#020617;color:#475569;padding:24px 0;text-align:center;font-si
 
 <header>
   <div class="nav">
-    <div class="logo">aceite<span>movilcr</span></div>
+    <div class="logo-nav">
+      <img src="aceitemovilcr_logo.png" alt="AceiteMóvilCR logo">
+      <div class="logo">aceite<span>movilcr</span></div>
+    </div>
     <div class="nav-cta">
       <a href="#servicios" class="btn btn-o" style="padding:10px 20px;font-size:13px">Ver precios</a>
       <a href="https://wa.me/50670891238?text=Hola!%20Quiero%20cotizar" class="btn btn-wa pulse" style="padding:10px 20px;font-size:13px;display:flex;align-items:center;gap:6px" target="_blank">
@@ -152,7 +201,12 @@ footer{background:#020617;color:#475569;padding:24px 0;text-align:center;font-si
 
 <section class="hero">
   <div class="c">
-    <div class="badge-top"><span class="dot"></span> Disponible en la GAM · Lun–Sáb</div>
+    <div class="hero-logo-wrap">
+      <div class="hero-logo-ring">
+        <img src="aceitemovilcr_logo.png" alt="AceiteMóvilCR">
+      </div>
+    </div>   
+    <div class="badge-top"><span class="dot"></span> Disponible en la GAM · Lun–Dom</div>
     <h1>El cambio de aceite,<br>en la <span class="acc">puerta de tu casa</span> u oficina.</h1>
     <p>Sin filas, sin esperas. Mecánicos certificados van donde estés con las mejores marcas del mercado.</p>
     <div class="hero-btns">
@@ -356,6 +410,9 @@ footer{background:#020617;color:#475569;padding:24px 0;text-align:center;font-si
 
 <section class="cta">
   <div class="c cta-inner">
+    <div class="cta-logo">
+      <img src="aceitemovilcr_logo.png" alt="AceiteMóvilCR">
+    </div>
     <h2>¿Te toca cambio de aceite?</h2>
     <p>Ahorrá tiempo y cuidá tu motor hoy mismo, sin salir de casa.</p>
     <div class="cta-btns">
@@ -369,7 +426,12 @@ footer{background:#020617;color:#475569;padding:24px 0;text-align:center;font-si
 </section>
 
 <footer>
-  <div class="c">&copy; 2026 aceitemovilcr · San José, Costa Rica · Todos los derechos reservados</div>
+  div class="c">
+    <div class="footer-inner">
+      <img class="footer-logo" src="aceitemovilcr_logo.png" alt="AceiteMóvilCR">
+      <p>&copy; 2026 aceitemovilcr · San José, Costa Rica · Todos los derechos reservados</p>
+    </div>
+  </div>
 </footer>
 
 <a href="https://wa.me/50670891238?text=Hola!%20Vengo%20de%20la%20web" class="fab" target="_blank" aria-label="Contactar por WhatsApp">
