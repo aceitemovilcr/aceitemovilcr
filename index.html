@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AceiteMóvilCR | Cambio de Aceite a Domicilio</title>
+    <style>
+        /* --- ESTILOS GENERALES Y VARIABLES --- */
+        :root {
+            --primario: #0f172a; /* Azul Oscuro Elegante */
+            --acento: #facc15; /* Amarillo Vibrante */
+            --texto: #334155;
+            --fondo-claro: #f8fafc;
+            --blanco: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: var(--texto);
+            background-color: var(--blanco);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* --- BOTONES --- */
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-principal {
+            background-color: var(--acento);
+            color: var(--primario);
+        }
+
+        .btn-principal:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(250, 204, 21, 0.4);
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+        }
+
+        /* --- HEADER / NAVEGACIÓN --- */
+        header {
+            background-color: var(--primario);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--blanco);
+            font-size: 24px;
+            font-weight: 800;
+        }
+
+        .logo span {
+            color: var(--acento);
+        }
+
+        /* --- HERO SECTION (INICIO) --- */
+        .hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), 
+                        url('https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&q=80&w=1200') no-repeat center center/cover;
+            color: var(--blanco);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #cbd5e1;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* --- PASOS / CÓMO FUNCIONA --- */
+        .pasos {
+            padding: 80px 0;
+            background-color: var(--fondo-claro);
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: var(--primario);
+            font-weight: 700;
+        }
+
+        .grid-pasos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1-fr));
+            gap: 30px;
+        }
+
+        .paso-card {
+            background: var(--blanco);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        }
+
+        .paso-numero {
+            background-color: var(--acento);
+            color: var(--primario);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-weight: bold;
+            margin: 0 auto 20px auto;
+        }
+
+        /* --- PRECIOS / SERVICIOS --- */
+        .servicios {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .grid-precios {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .precio-card {
+            background: var(--blanco);
+            border: 2px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 40px 30px;
+            width: 100%;
+            max-width: 340px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .precio-card.destacado {
+            border-color: var(--acento);
+            transform: scale(1.05);
+        }
+
+        .badge {
+            background: var(--acento);
+            color: var(--primario);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .precio-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .monto {
+            font-size: 36px;
+            font-weight: bold;
+            color: var(--primario);
+            margin-bottom: 20px;
+        }
+
+        .precio-card ul {
+            list-style: none;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .precio-card ul li {
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        .precio-card ul li::before {
+            content: "✓ ";
+            color: #22c55e;
+            font-weight: bold;
+        }
+
+        /* --- ACCIÓN FINAL / FOOTER --- */
+        .cta-final {
+            background-color: var(--primario);
+            color: var(--blanco);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #020617;
+            color: #64748b;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* RESPONSIVO */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 32px; }
+            .precio-card.destacado { transform: none; }
+            .grid-precios { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">aceite<span>movilcr</span></div>
+            <a href="https://wa.me/50688888888?text=Hola!%20Quiero%20cotizar%20un%20cambio%20de%20aceite" class="btn btn-principal" target="_blank">Cotizar Ya</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>El cambio de aceite de tu carro, <br>en la puerta de tu casa u oficina.</h1>
+            <p>No hagás filas ni perdás horas en un taller. Vamos a cualquier parte de la GAM con mecánicos expertos y las mejores marcas.</p>
+            <a href="https://wa.me/50688888888?text=Hola!%20Quiero%20agendar%20un%20cambio%20de%20aceite%20a%20domicilio" class="btn btn-principal" style="font-size: 18px; padding: 15px 40px;" target="_blank">Agendar por WhatsApp</a>
+        </div>
+    </section>
+
+    <section class="pasos">
+        <div class="container">
+            <h2 class="section-title">¿Cómo funciona? Así de fácil:</h2>
+            <div class="grid-pasos">
+                <div class="paso-card">
+                    <div class="paso-numero">1</div>
+                    <h3>Escribinos</h3>
+                    <p>Enviás un WhatsApp con el modelo de tu carro y tu ubicación.</p>
+                </div>
+                <div class="paso-card">
+                    <div class="paso-numero">2</div>
+                    <h3>Elegís Horario</h3>
+                    <p>Coordinamos el día, la hora y el tipo de aceite que prefiás.</p>
+                </div>
+                <div class="paso-card">
+                    <div class="paso-numero">3</div>
+                    <h3>¡Listo!</h3>
+                    <p>Llegamos en nuestra unidad móvil y hacemos el cambio sin ensuciar nada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="servicios">
+        <div class="container">
+            <h2 class="section-title">Nuestros Paquetes Recomendados</h2>
+            <p style="margin-bottom: 50px; margin-top: -30px;">Todos los servicios incluyen revisión de fluidos y filtro de aceite gratis.</p>
+            
+            <div class="grid-precios">
+                <div class="precio-card">
+                    <h3>Aceite Mineral</h3>
+                    <div class="monto">₡25,000*</div>
+                    <ul>
+                        <li>Ideal para motores antiguos</li>
+                        <li>Duración: 5,000 km</li>
+                        <li>Filtro de aceite premium</li>
+                        <li>Revisión de 15 puntos clave</li>
+                    </ul>
+                    <a href="https://wa.me/50688888888?text=Hola,%20me%20interesa%20el%20paquete%20Mineral" class="btn btn-principal" style="background: transparent; border: 2px solid var(--primario); color: var(--primario);">Elegir este</a>
+                </div>
+
+                <div class="precio-card destacado">
+                    <div class="badge">El más buscado ⭐</div>
+                    <h3>Full Sintético</h3>
+                    <div class="monto">₡45,000*</div>
+                    <ul>
+                        <li>Máxima protección del motor</li>
+                        <li>Duración: 10,000 km</li>
+                        <li>Filtro de aceite premium</li>
+                        <li>Revisión de 15 puntos clave</li>
+                        <li>Limpieza de motor superficial</li>
+                    </ul>
+                    <a href="https://wa.me/50688888888?text=Hola,%20me%20interesa%20el%20paquete%20Sintetico" class="btn btn-principal">Elegir este</a>
+                </div>
+            </div>
+            <p style="font-size: 12px; margin-top: 30px; color: #94a3b8;">*Precios estimados basados en un motor de 4 cilindros común. Consultá por tu modelo exacto.</p>
+        </div>
+    </section>
+
+    <section class="cta-final">
+        <div class="container">
+            <h2 style="font-size: 28px; margin-bottom: 20px;">¿Te toca cambio de aceite?</h2>
+            <p style="margin-bottom: 30px; color: #cbd5e1;">Ahorrá tiempo y cuidá tu motor hoy mismo sin salir de casa.</p>
+            <a href="https://wa.me/50688888888?text=Hola!%20Vengo%20de%20la%20web%20y%20quiero%20coordinar" class="btn btn-whatsapp" target="_blank">💬 Chatear con un Asesor</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 aceitemovilcr. Todos los derechos reservados. San José, Costa Rica.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
