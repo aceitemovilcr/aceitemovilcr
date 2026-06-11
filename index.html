@@ -27,6 +27,11 @@ header{background:var(--p);padding:16px 0;position:sticky;top:0;z-index:200;bord
 .logo{color:#fff;font-size:22px;font-weight:800;letter-spacing:-0.5px}
 .logo span{color:var(--a)}
 .nav-cta{display:flex;align-items:center;gap:12px}
+
+.nav-ig{display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);transition:all .25s;text-decoration:none}
+.nav-ig:hover{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);border-color:transparent;transform:scale(1.1)}
+.nav-ig svg{width:18px;height:18px;fill:#fff}
+  
 .pulse{animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,.4)}50%{box-shadow:0 0 0 8px rgba(37,211,102,0)}}
 
@@ -68,6 +73,13 @@ header{background:var(--p);padding:16px 0;position:sticky;top:0;z-index:200;bord
 .hero h1 .acc{color:var(--a)}
 .hero p{font-size:17px;color:#cbd5e1;margin-bottom:32px;line-height:1.7}
 .hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+.hero-social{display:flex;justify-content:center;gap:12px;margin-top:20px;margin-bottom:8px}
+.hero-social a{display:flex;align-items:center;gap:6px;padding:7px 16px;border-radius:50px;font-size:13px;font-weight:600;text-decoration:none;border:1px solid rgba(255,255,255,.15);color:#fff;background:rgba(255,255,255,.07);transition:all .25s}
+.hero-social a:hover{background:rgba(255,255,255,.15);transform:translateY(-2px)}
+.hero-social a svg{width:16px;height:16px;flex-shrink:0}
+.hero-social .ig-btn:hover{background:linear-gradient(45deg,rgba(240,148,51,.3),rgba(220,39,67,.3),rgba(188,24,136,.3));border-color:rgba(220,39,67,.4)}
+
 .social-proof{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:36px;padding-top:28px;border-top:1px solid rgba(255,255,255,.1)}
 .avatars{display:flex}
 .av{width:34px;height:34px;border-radius:50%;border:2px solid #0f172a;background:#4f46e5;display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;font-weight:700;margin-left:-8px}
@@ -164,8 +176,12 @@ header{background:var(--p);padding:16px 0;position:sticky;top:0;z-index:200;bord
 footer{background:#020617;color:#475569;padding:24px 0;text-align:center;font-size:13px}
 
 /* FOOTER CON LOGO */
-.footer-inner{display:flex;flex-direction:column;align-items:center;gap:10px}
-.footer-logo{height:40px;width:40px;object-fit:contain;opacity:.5;filter:grayscale(1)}
+.footer-inner{display:flex;flex-direction:column;align-items:center;gap:14px}
+.footer-logo{height:40px;width:40px;object-fit:contain;opacity:.4;filter:grayscale(1)}
+.footer-links{display:flex;align-items:center;gap:20px;flex-wrap:wrap;justify-content:center}
+.footer-ig{display:flex;align-items:center;gap:6px;text-decoration:none;color:#64748b;font-size:13px;transition:color .2s}
+.footer-ig:hover{color:#e1306c}
+.footer-ig svg{width:16px;height:16px;fill:currentColor}
 
 @media(max-width:768px){
 .hero h1{font-size:28px}
@@ -190,6 +206,9 @@ footer{background:#020617;color:#475569;padding:24px 0;text-align:center;font-si
       <div class="logo">aceite<span>movilcr</span></div>
     </div>
     <div class="nav-cta">
+      <a href="https://www.instagram.com/aceitemovilcr/" class="nav-ig" target="_blank" aria-label="Instagram de AceiteMóvilCR">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
       <a href="#servicios" class="btn btn-o" style="padding:10px 20px;font-size:13px">Ver precios</a>
       <a href="https://wa.me/50670891238?text=Hola!%20Quiero%20cotizar" class="btn btn-wa pulse" style="padding:10px 20px;font-size:13px;display:flex;align-items:center;gap:6px" target="_blank">
         <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.122 1.524 5.855L.057 23.886a.5.5 0 0 0 .606.63l6.277-1.638A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.946 0-3.772-.524-5.344-1.437l-.38-.224-3.95 1.034 1.05-3.855-.249-.395A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
@@ -213,6 +232,14 @@ footer{background:#020617;color:#475569;padding:24px 0;text-align:center;font-si
       <a href="https://wa.me/50670891238?text=Hola!%20Quiero%20agendar%20un%20cambio%20de%20aceite" class="btn btn-y" style="font-size:17px;padding:16px 36px" target="_blank">Agendar por WhatsApp</a>
       <a href="#servicios" class="btn" style="background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.2);padding:16px 30px">Ver paquetes ↓</a>
     </div>
+
+    <div class="hero-social">
+      <a href="https://www.instagram.com/aceitemovilcr/" class="ig-btn" target="_blank" aria-label="Síguenos en Instagram">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        Seguinos en Instagram
+      </a>
+    </div>
+    
     <div class="social-proof">
       <div class="avatars">
         <div class="av">JR</div><div class="av av2">MC</div><div class="av av3">LP</div><div class="av av4">AS</div>
@@ -249,7 +276,7 @@ footer{background:#020617;color:#475569;padding:24px 0;text-align:center;font-si
 <section class="pasos fade-in">
   <div class="c">
     <h2 class="sec-title">¿Cómo funciona? Así de fácil:</h2>
-    <p class="sec-sub">3 pasos y listo — sin visitar ningún taller</p>
+    <p class="sec-sub">¡3 pasos y listo! Sin visitar ningún taller</p>
     <div class="grid3">
       <div class="paso-card">
         <div class="paso-num">1</div>
@@ -277,11 +304,11 @@ footer{background:#020617;color:#475569;padding:24px 0;text-align:center;font-si
     <div class="precios">
       <div class="pc">
         <h3>Aceite Mineral</h3>
-        <div class="pc-sub">Ideal para motores de más de 5 años</div>
-        <div class="monto">₡35,000<span>/servicio</span></div>
+        <div class="pc-sub">Ideal para motores antiguos o con alto kilometraje</div>
+        <div class="monto">₡25,000<span>/servicio</span></div>
         <ul>
           <li>Aceite mineral SAE certificado</li>
-          <li>Duración: 5,000 km</li>
+          <li>Duración: 5,000 km o 6 meses</li>
           <li>Filtro de aceite premium</li>
           <li>Revisión de 15 puntos clave</li>
           <li>Servicio a domicilio incluido</li>
@@ -293,10 +320,10 @@ footer{background:#020617;color:#475569;padding:24px 0;text-align:center;font-si
         <div class="hot">⭐ El más buscado</div>
         <h3>Full Sintético</h3>
         <div class="pc-sub">Máxima protección — el favorito de nuestros clientes</div>
-        <div class="monto">₡55,000<span>/servicio</span></div>
+        <div class="monto">₡45,000<span>/servicio</span></div>
         <ul>
           <li>Aceite 100% sintético premium</li>
-          <li>Duración: 10,000 km</li>
+          <li>Duración: 10,000 km o 6 a 12 meses</li>
           <li>Filtro de aceite premium</li>
           <li>Revisión de 15 puntos clave</li>
           <li>Limpieza superficial del motor</li>
@@ -308,10 +335,10 @@ footer{background:#020617;color:#475569;padding:24px 0;text-align:center;font-si
       <div class="pc">
         <h3>Diesel & Pickup</h3>
         <div class="pc-sub">Para motores diesel y vehículos de trabajo</div>
-        <div class="monto">₡70,000<span>/servicio</span></div>
+        <div class="monto">₡55,000<span>/servicio</span></div>
         <ul>
           <li>Aceite diesel certificado</li>
-          <li>Duración: 8,000 km</li>
+          <li>Duración: 10,000 a 15,000 km o 12 meses</li>
           <li>Filtro de aceite y combustible</li>
           <li>Revisión de 15 puntos clave</li>
           <li>Servicio a domicilio incluido</li>
@@ -320,6 +347,8 @@ footer{background:#020617;color:#475569;padding:24px 0;text-align:center;font-si
       </div>
     </div>
     <p class="disclaimer">*Precios estimados para motores de 4 cilindros. Consultá por tu modelo exacto vía WhatsApp.</p>
+    <p class="disclaimer">*Precio base puede variar conforme la marca de aceite preferida por el usuario y viscosidad requerida o recomendada para el vehiculo.</p>
+    <p class="disclaimer">*La duración del aceite puede ser menor o mayor conforme al uso que el usuario le da al vehiculo.</p>
   </div>
 </section>
 
@@ -364,12 +393,12 @@ footer{background:#020617;color:#475569;padding:24px 0;text-align:center;font-si
       <div class="t-card">
         <div class="t-stars">★★★★★</div>
         <p class="t-text">"Lo hice desde la oficina. El mecánico llegó al parqueo, hizo todo mientras yo estaba en reuniones y me mandó el reporte por WhatsApp. Increíble servicio, 100% recomendado."</p>
-       <div class="t-author"><div class="t-av" style="background:#be185d">MC</div><div><div class="t-name">María Castro</div><div class="t-role">San José · Honda CR-V 2020</div></div></div>
+       <div class="t-author"><div class="t-av" style="background:#be185d">NT</div><div><div class="t-name">Natalia Torres</div><div class="t-role">San José · Honda CR-V 2020</div></div></div>
       </div>
       <div class="t-card">
         <div class="t-stars">★★★★★</div>
         <p class="t-text">"Precio justo, mecánico muy profesional y explicó todo lo que revisó. Ya pedí que me agendara el próximo cambio."</p>
-        <div class="t-author"><div class="t-av" style="background:#059669">LC</div><div><div class="t-name">Luis Chacon</div><div class="t-role">Heredia · Chery Tiggo 2024</div></div></div>
+        <div class="t-author"><div class="t-av" style="background:#059669">LG</div><div><div class="t-name">Luis García</div><div class="t-role">Heredia · Chery Tiggo 2024</div></div></div>
       </div>
     </div>
   </div>
@@ -390,7 +419,7 @@ footer{background:#020617;color:#475569;padding:24px 0;text-align:center;font-si
       </div>
       <div class="faq-item">
         <div class="faq-q">¿Qué marcas de aceite usan?<span class="ic">+</span></div>
-        <div class="faq-a">Trabajamos con marcas líderes como Castrol, Mobil 1, Valvoline, Petro-Canada y Shell. Siempre te recomendamos la viscosidad exacta que indica el fabricante de tu vehículo para máxima protección.</div>
+        <div class="faq-a">Trabajamos con marcas líderes como Castrol, Mobil, Valvoline, Liqui Moly, Pennzoil y Petro-Canada. Siempre te recomendamos la viscosidad exacta que indica el fabricante de tu vehículo para máxima protección.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">¿Qué pasa si necesito más aceite del esperado?<span class="ic">+</span></div>
@@ -420,16 +449,27 @@ footer{background:#020617;color:#475569;padding:24px 0;text-align:center;font-si
         <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.122 1.524 5.855L.057 23.886a.5.5 0 0 0 .606.63l6.277-1.638A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.946 0-3.772-.524-5.344-1.437l-.38-.224-3.95 1.034 1.05-3.855-.249-.395A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
         Chatear con un asesor
       </a>
+      <a href="https://www.instagram.com/aceitemovilcr/" class="btn" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff;font-size:16px;padding:15px 30px;display:flex;align-items:center;gap:8px" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        Ver Instagram
+      </a>
       <a href="tel:+50670891238" class="btn" style="background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.2);font-size:16px;padding:15px 30px">Llamar ahora</a>
     </div>
   </div>
 </section>
 
 <footer>
-  div class="c">
+ <div class="c">
     <div class="footer-inner">
       <img class="footer-logo" src="aceitemovilcr_logo.png" alt="AceiteMóvilCR">
-      <p>&copy; 2026 aceitemovilcr · San José, Costa Rica · Todos los derechos reservados</p>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/aceitemovilcr/" class="footer-ig" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          @aceitemovilcr
+        </a>
+        <span>·</span>
+        <span>&copy; 2026 aceitemovilcr · San José, Costa Rica · Todos los derechos reservados</span>
+      </div>
     </div>
   </div>
 </footer>
